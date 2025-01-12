@@ -16,7 +16,7 @@ public class LoginStep extends BaseStep {
         loginPage.setPasswordText(user.getPassword());
         loginPage.clickLogIn();
     }
-
+ 
     @Step(value = "Не успешый логин")
     public void unSuccessfulLogin() {
         loginPage.setEmailText("sdfadsg");
