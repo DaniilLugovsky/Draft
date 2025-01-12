@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
 
-    @Test(description = "Успушный вход", testName = "Test name")
+    @Test(description = "Успtшный вход", testName = "Test name")
     @Description("Тест проверка")
     @Severity(SeverityLevel.CRITICAL)
     @TmsLink("sadasd")
@@ -19,7 +19,8 @@ public class LoginTests extends BaseTest {
         dashboardPage.isPageOpened();
     }
 
-    @Test(testName = "Не успешный вход")
+    @Test(description = "Не успешный вход")
+    @Severity(SeverityLevel.CRITICAL)
     public void notLoginTest() {
         loginStep.unSuccessfulLogin();
         Assert.assertEquals(loginPage.getMessage().getText(),"Sorry, there was a problem.\n" +
