@@ -25,6 +25,5 @@ public class LoginTests extends BaseTest {
         Assert.assertEquals(loginPage.getMessage().getText(),"Sorry, there was a problem.\n" +
                 "Email/Login or Password is incorrect. Please try again.");
         loginPage.getMessage().isDisplayed();
-        Assert.assertTrue(false);
     }
 }
