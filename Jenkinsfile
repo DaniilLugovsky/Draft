@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: "${params.BRANCH}", url: '//https://github.com/DaniilLugovsky/Draft.git'
+                git branch: "${params.BRANCH}", url: 'https://github.com/DaniilLugovsky/Draft.git'
             }
         }
         stage('Test') {
