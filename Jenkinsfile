@@ -20,6 +20,11 @@ pipeline {
                 bat "mvn clean test"
             }
 
+        post {
+                        success {
+                            junit '**/target/surefire-reports/TEST-*.xml'
+                            allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+                        }
         }
     }
 }
