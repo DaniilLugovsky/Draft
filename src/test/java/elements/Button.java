@@ -21,5 +21,4 @@ public class Button {
     public boolean isDisplayed() {
         return uiElement.isDisplayed();
     }
-    
 }
