@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %5level - %msg%n"></PatternLayout>
+        </Console>
+        <RollingFile name="File" fileName="target/logfile.xml"
+                     filePattern="target/logfile-%d{yyyy-MM-dd}--%i.log.gz">
+            <XmlLayout/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="17 kB"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="logger" level="trace">
+            <AppenderRef ref="Console"/>
+        </Logger>
+        <Logger name="file" level="trace">
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Root level="trace">
+            <AppenderRef ref="File"/>
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
