@@ -54,7 +54,6 @@ public class BaseTest {
 
         faker = new Faker();
         random = new Random();
-
         //Создание пользователя с помощью билдера
         user = User
                 .builder()
