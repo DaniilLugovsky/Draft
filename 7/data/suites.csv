@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sun Jan 12 16:04:07 GMT 2025","Sun Jan 12 16:04:08 GMT 2025","1195","Surefire suite","Surefire test","tests.gui.LoginTests","tests.gui.LoginTests","loginTest","Успtшный вход","Тест проверка"
+"passed","Sun Jan 12 16:04:12 GMT 2025","Sun Jan 12 16:04:14 GMT 2025","2285","Surefire suite","Surefire test","tests.gui.AddProjectTest","tests.gui.AddProjectTest","addProject","Тест на создание проекта",""
+"passed","Sun Jan 12 16:04:10 GMT 2025","Sun Jan 12 16:04:10 GMT 2025","531","Surefire suite","Surefire test","tests.gui.LoginTests","tests.gui.LoginTests","notLoginTest","Не успешный вход",""
