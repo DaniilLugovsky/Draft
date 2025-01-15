@@ -3,12 +3,16 @@ package tests.api;
 import baseEntities.BaseApiTest;
 import com.beust.ah.A;
 import com.github.dockerjava.transport.DockerHttpClient;
+import com.google.gson.Gson;
 import io.restassured.response.Response;
 import models.Project;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.Reader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,10 +109,9 @@ int projectID = 48;
         expectedProject.setName("Project");
         expectedProject.setAnnouncement("This is show test announcement.");
         expectedProject.setShowAnnouncement(false);
-        expectedProject.setSuite_mod(0);
+        expectedProject.setSuite_mod(1);
 
         Map<String, Object> jsonAsMap = new HashMap<String, Object>();
-
         jsonAsMap.put("name", expectedProject.getName());
         jsonAsMap.put("suite_mode", expectedProject.getSuite_mod());
 
@@ -121,4 +124,46 @@ int projectID = 48;
                 .statusCode(HttpStatus.SC_OK)
                 .log().body();
     }
+
+    @Test
+    public void postApiTestResponseSon() throws FileNotFoundException {
+
+        Project expectedProject = new Project();
+        expectedProject.setName("Project");
+        expectedProject.setAnnouncement("This is show test announcement.");
+        expectedProject.setShowAnnouncement(false);
+        expectedProject.setSuite_mod(1);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(expectedProject);
+
+        Project actualProject = gson.fromJson(json, Project.class);
+
+        Reader reader = new FileReader(TestRailApiTest.class.getClassLoader().getResource("project.json").getFile());
+
+        Project newProject = gson.fromJson(reader, Project.class);
+        System.out.println(newProject.toString());
+    /*    String endpoint = "index.php?/api/v2/add_project";
+        given()
+                .body(json)
+                .when()
+                .post(endpoint)
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .log().body();*/
+    }
+
+    @Test
+    public void postApiTestResponseObject() {
+
+        String endpoint = "index.php?/api/v2/add_project";
+        given()
+                .body(TestRailApiTest.class.getClassLoader().getResourceAsStream("project.json"))
+                .when()
+                .post(endpoint)
+                .then()
+                .statusCode(HttpStatus.SC_OK)
+                .log().body();
+    }
+
 }
