@@ -1,17 +1,13 @@
 package stepDefs;
 
-import baseEntities.BaseTest;
 import baseEntities.BaseTestHook;
 import configuration.ReadProperties;
-import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.DashboardPage;
 import pages.LoginPage;
-import services.BrowsersService;
 
 public class LoginStepDefs extends BaseTestHook {
     private BaseTestHook baseTestHook;

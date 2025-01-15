@@ -1,17 +1,12 @@
 package stepDefs;
 
-import baseEntities.BaseTest;
 import baseEntities.BaseTestHook;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.DashboardPage;
 import pages.LoginPage;
 import pages.addProjectPages.ProjectPage;
-import services.BrowsersService;
 
 public class ProjectStepDefs extends BaseTestHook {
     BaseTestHook baseTestHook;

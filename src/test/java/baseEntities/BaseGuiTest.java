@@ -20,10 +20,8 @@ import utils.InvokedListener;
 
 import java.util.Random;
 
-import static models.User.*;
-
 @Listeners(InvokedListener.class)
-public class BaseTest {
+public class BaseGuiTest {
     protected WebDriver driver;
     protected WaitService waitService;
     protected LoginStep loginStep;

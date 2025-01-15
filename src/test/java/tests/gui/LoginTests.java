@@ -1,13 +1,11 @@
 package tests.gui;
 
-import baseEntities.BaseTest;
-import com.sun.source.tree.AssertTree;
-import configuration.ReadProperties;
+import baseEntities.BaseGuiTest;
 import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTests extends BaseTest {
+public class LoginTests extends BaseGuiTest {
 
     @Test(description = "Успtшный вход", testName = "Test name")
     @Description("Тест проверка")

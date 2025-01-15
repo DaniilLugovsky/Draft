@@ -19,6 +19,9 @@ public class ReadProperties {
     public static String getUrl() {
         return properties.getProperty("url");
     }
+    public static String getUri() {
+        return properties.getProperty("uri");
+    }
 
     public static String browserName() {
         return properties.getProperty("browser");

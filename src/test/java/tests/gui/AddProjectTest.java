@@ -1,17 +1,15 @@
 package tests.gui;
 
-import baseEntities.BaseTest;
-import configuration.ReadProperties;
+import baseEntities.BaseGuiTest;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
-import lombok.extern.log4j.Log4j2;
 import models.Project;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AddProjectTest extends BaseTest {
+public class AddProjectTest extends BaseGuiTest {
 
     Logger logger = LogManager.getLogger(AddProjectTest.class);
 
@@ -26,15 +24,15 @@ public class AddProjectTest extends BaseTest {
         int projectType = faker.random().nextInt(0, 2);
         boolean enableTCApprovals = faker.random().nextBoolean();
 
-        project = Project.builder()
+        /*project = Project.builder()
                 .name(projectName)
                 .announcement(announcement)
-                .isShowAnnouncement(isShouAnnouncement)
-                .projectType(projectType)
+                .showAnnouncement(isShouAnnouncement)
+                .suite_mod(projectType)
                 .isEnableTCApprovals(enableTCApprovals)
-                .build();
+                .build();*/
 
-                /*.setName(projectName);
+               /* .setName(projectName);
         project.setAnnouncement(announcement);
         project.setShowAnnouncement(isShouAnnouncement);
         project.setProjectType(projectType);
