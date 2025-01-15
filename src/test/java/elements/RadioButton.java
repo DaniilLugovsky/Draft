@@ -13,7 +13,7 @@ public class RadioButton {
     public RadioButton(WebDriver driver, By by) {
         uiElementsList = new ArrayList<>();
 
-        for (WebElement element : driver.findElements(by)){
+        for (WebElement element : driver.findElements(by)) {
             UIElement uiElement = new UIElement(driver, element);
             uiElementsList.add(uiElement);
         }

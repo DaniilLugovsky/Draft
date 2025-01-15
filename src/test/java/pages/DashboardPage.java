@@ -10,6 +10,7 @@ public class DashboardPage extends BasePage {
     private final By DASHBOARD_PAGE_IDENTIFIER_LOCATOR = By.id("navigation-dashboard");
     private final By MESSAGE_SUCCESSFULLY_ADD_PROJECT_TEXT = By.xpath("//div[@data-testid = 'messageSuccessDivBox']");
     private final By ADD_PROJECT_BUTTON_LOCATOR = By.id("sidebar-projects-add");
+
     public DashboardPage(WebDriver driver) {
         super(driver);
     }
@@ -22,6 +23,7 @@ public class DashboardPage extends BasePage {
     public Button getAddProjectButton() {
         return new Button(driver, ADD_PROJECT_BUTTON_LOCATOR);
     }
+
     public Text getMessageSuccessfullyAddProject() {
         return new Text(driver, MESSAGE_SUCCESSFULLY_ADD_PROJECT_TEXT);
     }
@@ -31,6 +33,6 @@ public class DashboardPage extends BasePage {
     }
 
     public String messageSuccessfullyAddProject() {
-       return getMessageSuccessfullyAddProject().getText();
+        return getMessageSuccessfullyAddProject().getText();
     }
 }

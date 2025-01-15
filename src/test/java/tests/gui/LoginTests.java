@@ -23,7 +23,7 @@ public class LoginTests extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     public void notLoginTest() {
         loginStep.unSuccessfulLogin();
-        Assert.assertEquals(loginPage.getMessage().getText(),"Sorry, there was a problem.\n" +
+        Assert.assertEquals(loginPage.getTextMessage(),"Sorry, there was a problem.\n" +
                 "Email/Login or Password is incorrect. Please try again.");
         loginPage.getMessage().isDisplayed();
     }

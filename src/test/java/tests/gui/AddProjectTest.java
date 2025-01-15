@@ -16,16 +16,14 @@ public class AddProjectTest extends BaseTest {
     Logger logger = LogManager.getLogger(AddProjectTest.class);
 
 
-
-
     @Test(description = "Тест на создание проекта", testName = "Create project")
     @Severity(SeverityLevel.CRITICAL)
-    public void addProject(){
+    public void addProject() {
         //Параметры проекта
         String projectName = faker.name().firstName();
         String announcement = faker.book().title();
         boolean isShouAnnouncement = faker.random().nextBoolean();
-        int projectType = faker.random().nextInt(0,2);
+        int projectType = faker.random().nextInt(0, 2);
         boolean enableTCApprovals = faker.random().nextBoolean();
 
         project = Project.builder()

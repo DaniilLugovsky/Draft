@@ -1,0 +1,8 @@
+{
+  "id" : 1,
+  "name" : "name",
+  "announcement" : "announcement",
+  "isShowAnnouncement" : true,
+  "projectType" : 1,
+  "isEnableTCApprovals" : true
+}

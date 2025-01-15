@@ -43,7 +43,7 @@ public class BaseTest {
         driver = new BrowsersService().getDriver();
         waitService = new WaitService(driver);
 
-        iTestContext.setAttribute("webdriver",driver);
+        iTestContext.setAttribute("webdriver", driver);
 
         loginStep = new LoginStep(driver);
         projectStep = new ProjectStep(driver);

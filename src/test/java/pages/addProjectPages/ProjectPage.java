@@ -16,6 +16,7 @@ public class ProjectPage extends BasePage {
     private final By PROJECT_TYPE_RADIOBUTTON = By.name("suite_mode");
     private final By ENABLED_TESTCASE_CHECKBOX = By.id("case_statuses_enabled");
     private final By ADD_PROJECT_BUTTON = By.id("accept");
+
     public ProjectPage(WebDriver driver) {
         super(driver);
     }

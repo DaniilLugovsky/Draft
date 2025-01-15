@@ -12,13 +12,13 @@ public class UIElement implements WebElement {
     private WebElement webElement;
     private WebDriver driver;
 
-    private UIElement(WebDriver driver){
+    private UIElement(WebDriver driver) {
         this.driver = driver;
         waitService = new WaitService(driver);
     }
 
     public UIElement(WebDriver driver, By by) {
-       this(driver);
+        this(driver);
         webElement = waitService.presenceOfElementLocated(by);
     }
 
@@ -38,10 +38,7 @@ public class UIElement implements WebElement {
             } catch (ElementClickInterceptedException ex1) {
                 Actions actions = new Actions(driver);
                 try {
-                    actions
-                            .click(webElement)
-                            .build()
-                            .perform();
+                    actions.click(webElement).build().perform();
                 } catch (ElementClickInterceptedException ex2) {
                     jsClick();
                 }
@@ -101,6 +98,7 @@ public class UIElement implements WebElement {
         }
         return list;
     }
+
     @Override
     public UIElement findElement(By by) {
         return new UIElement(driver, webElement.findElement(by));
