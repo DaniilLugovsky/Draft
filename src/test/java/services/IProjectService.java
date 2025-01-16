@@ -7,7 +7,7 @@ public interface IProjectService {
     Response getGeneralProject(int id);
     Project getProject(int id);
     Response getProjects();
-    void addProject();
-    void updateProject();
-    void deleteProject();
+    Project addProject(Project project);
+    Project updateProject(Project project, int id);
+    Response deleteProject(int id);
 }
