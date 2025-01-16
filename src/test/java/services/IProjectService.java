@@ -6,7 +6,7 @@ import models.Project;
 public interface IProjectService {
     Response getGeneralProject(int id);
     Project getProject(int id);
-    void getProjects();
+    Response getProjects();
     void addProject();
     void updateProject();
     void deleteProject();

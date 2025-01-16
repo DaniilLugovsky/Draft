@@ -36,8 +36,14 @@ public class ProjectService implements IProjectService{
     }
 
     @Override
-    public void getProjects() {
-
+    public Response getProjects() {
+        return given()
+                .when()
+                .get(Endpoints.GET_PROJECTS)
+                .then()
+                .log().body()
+                .statusCode(HttpStatus.SC_OK)
+                .extract().response();
     }
 
     @Override

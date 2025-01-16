@@ -27,6 +27,15 @@ public class TestRailApiCRUDTest extends BaseApiTest {
     }
 
     @Test
+    public void getAllProject() {
+        Response response = projectService.getProjects();
+        Project[] projects = response.getBody().jsonPath().getObject("projects", Project[].class);
+        System.out.println(projects.length);
+        System.out.println(projects[0]);
+        System.out.println(projects[1]);
+    }
+
+    @Test
     public void readProjectTest() {
         Project project = projectService.getProject(60);
         System.out.println(project.toString());
