@@ -16,8 +16,7 @@ public class ProjectStep extends BaseStep {
         projectPage.setNameProject(project.getName());
         projectPage.setAnnouncement(project.getAnnouncement());
         projectPage.choiceShowAnnouncement(project.isShowAnnouncement());
-        projectPage.choiceTypeProjectByIndex(project.getSuite_mod());
-        projectPage.choiceEnabledTestCase(project.isEnableTCApprovals());
+        projectPage.choiceTypeProjectByIndex(project.getSuiteMode());
         projectPage.clickAddProjectButton();
     }
 }

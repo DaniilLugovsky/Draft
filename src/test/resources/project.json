@@ -1,8 +1,7 @@
 {
   "id" : 1,
-  "name" : "name",
+  "name" : "ProjectTest",
   "announcement" : "announcement",
-  "isShowAnnouncement" : true,
-  "projectType" : 1,
-  "isEnableTCApprovals" : true
+  "show_announcement" : true,
+  "suite_mode" : 1
 }

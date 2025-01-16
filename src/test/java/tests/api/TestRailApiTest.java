@@ -1,8 +1,6 @@
 package tests.api;
 
 import baseEntities.BaseApiTest;
-import com.beust.ah.A;
-import com.github.dockerjava.transport.DockerHttpClient;
 import com.google.gson.Gson;
 import io.restassured.response.Response;
 import models.Project;
@@ -81,7 +79,7 @@ int projectID = 48;
         expectedProject.setName("WP_Project_01");
         expectedProject.setAnnouncement("This is a test announcement.");
         expectedProject.setShowAnnouncement(true);
-        expectedProject.setSuite_mod(1);
+        expectedProject.setSuiteMode(1);
 
         String endpoint = "index.php?/api/v2/add_project";
         given()
@@ -94,7 +92,7 @@ int projectID = 48;
                         expectedProject.getName(),
                         expectedProject.getAnnouncement(),
                         expectedProject.isShowAnnouncement(),
-                        expectedProject.getSuite_mod()))
+                        expectedProject.getSuiteMode()))
                 .when()
                 .post(endpoint)
                 .then()
@@ -109,11 +107,11 @@ int projectID = 48;
         expectedProject.setName("Project");
         expectedProject.setAnnouncement("This is show test announcement.");
         expectedProject.setShowAnnouncement(false);
-        expectedProject.setSuite_mod(1);
+        expectedProject.setSuiteMode(1);
 
         Map<String, Object> jsonAsMap = new HashMap<String, Object>();
         jsonAsMap.put("name", expectedProject.getName());
-        jsonAsMap.put("suite_mode", expectedProject.getSuite_mod());
+        jsonAsMap.put("suite_mode", expectedProject.getSuiteMode());
 
         String endpoint = "index.php?/api/v2/add_project";
         given()
@@ -132,7 +130,7 @@ int projectID = 48;
         expectedProject.setName("Project");
         expectedProject.setAnnouncement("This is show test announcement.");
         expectedProject.setShowAnnouncement(false);
-        expectedProject.setSuite_mod(1);
+        expectedProject.setSuiteMode(1);
 
         Gson gson = new Gson();
         String json = gson.toJson(expectedProject);

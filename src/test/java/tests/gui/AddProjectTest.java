@@ -28,7 +28,7 @@ public class AddProjectTest extends BaseGuiTest {
                 .name(projectName)
                 .announcement(announcement)
                 .showAnnouncement(isShouAnnouncement)
-                .suite_mod(projectType)
+                .suiteMode(projectType)
                 .isEnableTCApprovals(enableTCApprovals)
                 .build();*/
 
